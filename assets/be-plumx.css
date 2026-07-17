@@ -1,0 +1,56 @@
+/* BE PlumX Metrics */
+.be-plumx-card{
+  border: 1px solid color-mix(in srgb, var(--contrast) 18%, transparent);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-top: 16px;
+  background: color-mix(in srgb, var(--base) 96%, transparent);
+  position: relative;
+}
+
+.be-plumx-card__head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 12px;
+  margin: 0 0 10px 0; /* h2 reset */
+  font-size: 0.95rem;
+}
+
+.be-plumx-card__body{
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  min-height: 28px;
+}
+
+/* State handling:
+   - pending: hide whole card until PlumX actually renders content
+   - blocked: show card (blocker visible), but you may want to hide the body until the user clicks
+*/
+.be-plumx-card.be-plumx-state--pending{
+  display:none;
+}
+
+.be-plumx-card.be-plumx-state--blocked .be-plumx-card__body{
+  display:none;
+}
+
+/* Blocker */
+.be-plumx-blocker{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 14px;
+  margin: 10px 0 12px;
+}
+
+.be-plumx-blocker__text{
+  margin: 0;
+  font-size: 0.95rem;
+  opacity: .9;
+}
+
+.be-plumx-blocker__btn{
+  white-space: nowrap;
+}
