@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       BE PlumX Metrics
  * Description:       Adds a PlumX widget to posts that have a DOI stored in post meta (default key: doi). Includes a shortcode, settings page, and an integrated script blocker (click-to-load) for cookie-free sites.
- * Version:           0.2.6
+ * Version:           0.2.7
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Big Ears Webagentur
@@ -13,7 +13,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'BE_PLUMX_VERSION', '0.2.6' );
+define( 'BE_PLUMX_VERSION', '0.2.7' );
 define( 'BE_PLUMX_FILE', __FILE__ );
 define( 'BE_PLUMX_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BE_PLUMX_URL', plugin_dir_url( __FILE__ ) );
@@ -311,11 +311,7 @@ function be_plumx_render_widget( array $atts = [], ?int $post_id = null ) : stri
 	// If there is no blocker, start hidden until PlumX actually renders content.
 	$state_class = $has_blocker ? 'be-plumx-state--blocked' : 'be-plumx-state--pending';
 
-	$title_text = trim( (string) $atts['title'] );
-	$title_html = $title_text !== '' ? '<h2 class="be-plumx-card__title">' . esc_html( $title_text ) . '</h2>' : '';
-
 	return '<section class="be-plumx-card ' . esc_attr( $state_class ) . '" data-be-plumx-state="' . esc_attr( $has_blocker ? 'blocked' : 'pending' ) . '" aria-label="PlumX Metrics">' .
-		$title_html .
 		$blocker .
 		'<div class="be-plumx-card__body">' . $anchor . '</div>' .
 	'</section>';

@@ -4,10 +4,13 @@ Tags: plumx, metrics, doi, open access, consent
 Requires at least: 6.0
 Tested up to: 6.5
 Requires PHP: 7.4
-Stable tag: 0.2.6
+Stable tag: 0.2.7
 License: GPLv2 or later
 
 == Changelog ==
+= 0.2.7 =
+- Remove card title heading for cleaner visual alignment with the PlumX widget
+
 = 0.2.6 =
 - Fix: undefined $title_html variable in card renderer caused PHP notice and missing card title output
 
