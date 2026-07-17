@@ -2,7 +2,7 @@
 /**
  * Plugin Name:       BE PlumX Metrics
  * Description:       Adds a PlumX widget to posts that have a DOI stored in post meta (default key: doi). Includes a shortcode, settings page, and an integrated script blocker (click-to-load) for cookie-free sites.
- * Version:           0.2.5
+ * Version:           0.2.6
  * Requires at least: 6.0
  * Requires PHP:      7.4
  * Author:            Big Ears Webagentur
@@ -13,7 +13,7 @@
 
 if ( ! defined( 'ABSPATH' ) ) exit;
 
-define( 'BE_PLUMX_VERSION', '0.2.5' );
+define( 'BE_PLUMX_VERSION', '0.2.6' );
 define( 'BE_PLUMX_FILE', __FILE__ );
 define( 'BE_PLUMX_DIR', plugin_dir_path( __FILE__ ) );
 define( 'BE_PLUMX_URL', plugin_dir_url( __FILE__ ) );
